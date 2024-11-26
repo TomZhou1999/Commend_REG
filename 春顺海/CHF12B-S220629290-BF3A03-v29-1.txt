@@ -1,0 +1,451 @@
+; ----------------------------------------------------------------
+; Rule Descirptor:
+;   This file is using on XuCtrl.exe.
+;   Each table include name and content.
+;   The table's name is in the "[]"
+;   The content's value is "0xAA" or "AA",
+;   The content's separator is " " or ","  or "\t"
+;   The comment symbol is "//" or ";".
+; ---------------------------------------------------------------
+; Sensor Table Descriptor:
+;   The sensor table's name must be "SensorTab"
+; ---------------------------------------------------------------
+; Common Table Descriptor:
+;   The register table's name must be "CommonTab"
+;   Cmd(8 bits) description.
+;   |-----------------------------------------------------------|
+;   | bit7         | bit6 bit5     | bit4 bit3 bit2 bit1 bit0   |
+;   |-----------------------------------------------------------|
+;   | 0: Data      | 01: OR        | 0~1F: total length         |
+;   | 1: Reg(Ram)  | 10: AND       |       include Cmd and Addr |
+;   |              | other: Set    |                            |
+;   |-----------------------------------------------------------|
+; ---------------------------------------------------------------
+[SettingFileVer]
+0x00, 0x03, 0xDD, 0x08, 0xE8
+
+[SensorDelayCmd]
+    0xFE
+
+[SensorTab]
+//  Sector0
+    0x01, 0x28, // Sector0's table length
+//  Addr, Value,
+    0x09, 0x55,
+    0x15, 0x02,
+    0x1e, 0x70, //F0M0, bit[4]=flip en, bit[5]=mirror en
+    0x06, 0x78,
+    0x21, 0x00,
+    0x3e, 0x37,
+    0x29, 0x2b,
+    0x27, 0x98,
+    0x16, 0x25,
+    0xd9, 0x24,
+    0xdf, 0x2f,
+    0x20, 0x00,
+    0xd2, 0x18,
+    0x11, 0x10,
+    0x1b, 0x09,
+    0x2f, 0x4e,
+    0x2b, 0x20,
+    0x92, 0x09,
+    0xcc, 0x77,
+    0xcd, 0x7b,
+    0xce, 0x82,
+    0xcf, 0x98,
+    0xc3, 0xa0,
+    0x3a, 0x00,
+    0x4a, 0x98,
+    0x12, 0x00,
+    0x13, 0x08,
+    0x01, 0x10,
+    0x02, 0x20,
+    0x8c, 0x02,
+    0x8d, 0x4c,
+    0x87, 0x16,
+    0x13, 0x07,
+    0x35, 0x04,
+    0x65, 0x18,//220429，38
+    0x66, 0x18,//220429，42
+  0x9C, 0x28,
+  0x38, 0x28,
+  0xBE, 0x58,
+    0x70, 0x0f,
+    0x3b, 0x00,
+    0x71, 0x0c,
+    0x72, 0x2f,
+    0x73, 0x4f,
+    0x75, 0x00,
+    0x76, 0xd8,
+    0x77, 0x0a,
+    0x78, 0xff,
+    0x79, 0x14,
+    0x7a, 0x12,//----
+    0x9e, 0x04,
+    0x7d, 0x2a,
+    0x39, 0xc8,
+    0x3f, 0xc8,
+    0x90, 0x20,
+    0x5f, 0x04,
+    0x40, 0x19,
+    0x41, 0x1e,
+    0x42, 0x1f,
+    0x43, 0x20,
+    0x44, 0x1d,
+    0x45, 0x19,
+    0x46, 0x17,
+    0x47, 0x17,
+    0x48, 0x14,
+    0x49, 0x12,
+    0x4b, 0x0f,
+    0x4c, 0x0c,
+    0x4e, 0x08,
+    0x4f, 0x06,
+    0x50, 0x03,
+    0x24, 0x50,////220429，40------,48
+    0x97, 0x40,
+    0x25, 0x88,
+    0x81, 0xff,
+    0x82, 0x18,
+    0x83, 0x30,
+    0x84, 0x20,
+    0x85, 0x38,
+    0x86, 0x60,
+    0x94, 0xf2,
+    0x80, 0x92,
+    0x98, 0xb0, //8a
+    0x89, 0x2d,
+    0x8e, 0x2c,
+    0x8f, 0x82,
+    0x8a, 0x93,
+    0x8b, 0x7a,
+    0x9f, 0xf4,
+    0x9a, 0x30,
+    0xf7, 0x8a,
+    0x5a, 0xec,
+    0x51, 0x90,
+    0x52, 0x10,
+    0x53, 0x8d,
+    0x54, 0x88,
+    0x57, 0x82,
+    0x58, 0x8d,
+    0x5a, 0x7c,
+    0x51, 0x80,
+    0x52, 0x04,
+    0x53, 0x8d,
+    0x54, 0x88,
+    0x57, 0x82,
+    0x58, 0x8d,
+    0x5a, 0x6c,
+    0x51, 0x93,
+    0x52, 0x04,
+    0x53, 0x8a,
+    0x54, 0x88,
+    0x57, 0x02,
+    0x58, 0x8d,
+    0xb0, 0xa0,
+    0xb1, 0x26,
+    0xb2, 0x1c,
+    0xb4, 0xfd,
+    0xb0, 0x30,
+    0xb1, 0x90,//=========
+    0xb2, 0x90,//=======
+    0xb4, 0xf1,
+    0x3c, 0x40,
+    0x56, 0x48,
+    0x4d, 0x40,
+    0x59, 0x40,
+    0xb4, 0xf0,
+    0x56, 0x58,
+    0x6a, 0x81,
+    0x23, 0x44,
+    0xa2, 0x04,
+    0xa3, 0x12,
+    0xa4, 0x1D,
+    0xa5, 0x2A,
+    0xa7, 0x1a,
+    0xa8, 0x1f,
+    0xa9, 0x16,
+    0xaa, 0x16,
+    0xab, 0x16,
+    0xac, 0x44,
+    0xad, 0xf0,
+    0xae, 0xff,
+    0xc5, 0x66,
+    0xc7, 0x28,
+    0xc8, 0x0d,
+    0xc9, 0x16,
+    0xd3, 0x09,
+    0xd4, 0x15,
+    0xd0, 0x00,
+    0xd1, 0x01,
+
+//===============================================================
+//===============================================================
+//===============================================================
+; Common Table Descriptor:
+;   The register table's name must be "CommonTab"
+;   Cmd(8 bits) description.
+;   +-----------------------------------------------------------+
+;   | bit7         | bit6 bit5     | bit4 bit3 bit2 bit1 bit0   |
+;   |--------------+---------------+----------------------------|
+;   |              | 00: Set       |                            |
+;   | 0: Data      | 01: OR        | 2~1F: total length         |
+;   | 1: Reg(Ram)  | 10: AND       |       include Cmd and Addr |
+;   |              | 11: Delay     |                            |
+;   +-----------------------------------------------------------+
+[CommonTab]
+0x00, 0x19, //Sector0 Length
+//  Cmd(8b) Addr(2B), Data(1B)
+    0x0B, 0x03, 0x00, 0x00, // Reg[MCLK_SRC] = MCLK_96M;
+                      0x01, // Reg[MCLK_DIV] = 1;
+                      0x00, // Reg[MCLK_ON] = 0;
+                      0x00, // Reg[PX_CLK_EN] = 0;
+                      0x02, // Reg[YUV_SEQ_IN] = YUYV;
+                      0x00, // Reg[INVSE_PX_CLK] = OFF;
+                      0x00, // Reg[INVSE_VSYNC] = OFF;
+                      0x00, // Reg[INVSE_HSYNC] = OFF;
+    0x04, 0x03, 0x0E, 0x02, // Reg[YUV_SEQ_OUT] = YUYV;
+    0x06, 0x0A, 0x2C, 0xDC, // g_oSensorInfo.I2cId = 0xDC;
+                      0x01, // g_oSensorInfo.I2cAddrLen = 1;
+                      0x01, // g_oSensorInfo.I2cDataLen = 1;
+    0x04, 0x0B, 0x83, 0x48, // bAeTarget default value = follow Sensor[0x24];
+
+0x00, 0x09                  // sector1 length ; 640x360 from 640x480
+//  Cmd(8b) Addr(2B), Data(1B)
+    0x09, 0x03, 0x20, 0x3c, //WIN_OFFSET_LINE_LO
+                      0x00, //WIN_OFFSET_LINE_HI
+                      0x00, //WIN_OFFSET_PIXEL_LO
+                      0x00, //WIN_OFFSET_PIXEL_HI
+                      0x68, //WIN_SIZE_IN_LINE_LO
+                      0x01, //WIN_SIZE_IN_LINE_HI
+
+0x00, 0x0B                  // sector2 length ; 352x288 & 176x144 from 572x468
+//  Cmd(8b) Addr(2B), Data(1B)
+    0x0B, 0x03, 0x20, 0x06, //WIN_OFFSET_LINE_LO = (480-468)/2
+                      0x00, //WIN_OFFSET_LINE_HI = (480-468)/2
+                      0x22, //WIN_OFFSET_PIXEL_LO = (640-572)/2
+                      0x00, //WIN_OFFSET_PIXEL_HI = (640-572)/2
+                      0xD4, //468
+                      0x01, //468
+                      0x3C, //572
+                      0x02, //572
+[FmtResInfo]
+01
+01
+01
+03
+01
+07
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+07
+80
+0B
+80
+0D
+80
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+[ExResTab]
+[ExFpsTab]
+08
+06
+1E
+19
+14
+0F
+0A
+05
+00
+[Main]
+00 //VID
+02
+05 E3 
+01 //PID
+02
+F1 2C 
+02 //BCD
+02
+00 00 
+03 //Manufacture
+18
+00 55 00 54 00 50 00 32 00 30 00 30 00 58 00 30 00 30 00 33 00 4D 00 50  //UTP200X003MP
+04 //ProductName
+18
+00 55 00 54 00 50 00 32 00 30 00 30 00 58 00 30 00 30 00 33 00 4D 00 50  //UTP200X003MP
+05 //SerialNumber
+00
+06 //InterfaceName
+18
+00 55 00 54 00 50 00 32 00 30 00 30 00 58 00 30 00 30 00 33 00 4D 00 50  //UTP200X003MP
+07 //ConfigName
+18
+00 55 00 54 00 50 00 32 00 30 00 30 00 58 00 30 00 30 00 33 00 4D 00 50  //UTP200X003MP
+08 //InterfaceName2
+00
+09 //HexVer
+22
+48 65 78 20 56 65 72 2E 20 42 46 33 41 30 33 2C 20 76 32 30 2D 30 2C 20 32 30 32 32 2F 30 34 2F 32 32  //Hex Ver. BF3A03, v20-0, 2022/04/22
+0A //SetVer
+22
+53 65 74 20 56 65 72 2E 20 42 46 33 41 30 33 2C 20 76 32 39 2D 30 2C 20 32 30 32 32 2F 30 36 2F 32 39  //Set Ver. BF3A03, v29-0, 2022/06/29
+0B //BinVer
+26
+42 72 69 43 61 6D 65 72 61 2D 53 32 32 30 36 32 39 32 39 30 2D 42 46 33 41 30 33 2D 76 32 39 2D 31 31 2E 62 69 6E  //BriCamera-S220629290-BF3A03-v29-11.bin
+0C //VidPidBcdEn
+01
+01 
+0D //ManufactureEn
+01
+01 
+0E //ProductNameEn
+01
+01 
+0F //SerialNumberEn
+01
+00 
+10 //InterfaceNameEn
+01
+01 
+11 //ConfigNameEn
+01
+01 
+12 //InterfaceName2En
+01
+00 
+[Option]
+00 //OptionCheck
+01
+00 
+01 //PinSnrRst
+01
+00 
+02 //PinSnrPd
+01
+01 
+03 //PinWp
+01
+02 
+04 //PinSnapshot
+01
+03 
+05 //PinLed
+01
+04 
+06 //PinPrivacy
+01
+05 
+07 //LvSnap
+01
+01 
+08 //LvPrivacy
+01
+00 
+09 //LvLed
+01
+01 
+0A //PwrMax
+01
+32 
+0B //PuEnFs
+02
+7F 15 
+0C //CtEnFs
+03
+0E 00 00 
+0D //PuEnHs
+02
+7F 15 
+0E //CtEnHs
+03
+0E 00 00 
+[UsbBandWidth]
+01 //High Speed
+00 //1 = Enable, 0 = Disable
+0C 00 //Alt1 Size
+0A 50 //Alt2 Size
+08 00 //Alt3 Size
+06 40 //Alt4 Size
+04 00 //Alt5 Size
+02 00 //Alt6 Size
+02 //Full Speed
+00 //1 = Enable, 0 = Disable
+03 70 //Alt1 Size
+03 20 //Alt2 Size
+02 A8 //Alt3 Size
+02 00 //Alt4 Size
+01 90 //Alt5 Size
+01 00 //Alt6 Size
+[PropertyPage]
+0C //PropDefEn
+01
+00 
+0D //AwbEn
+01
+00 
+0E //AeEn
+01
+00 
+0F //AfEn
+01
+00 
+10 //LowLight
+01
+00 
+[Audio]
+[SlaveOption]
